@@ -32,7 +32,6 @@ def get_filters():
             print("Sorry we were not able to get the name of the city to analyze data, Please input either chicago, new york city or washington.\n")
 
     # TO DO: get user input for month (all, january, february, ... , june)
-    month_name = ''
     while month_name not in months:
         month_name = input("\nWhat is the name of the month to filter data? (ex; Input january, february, ... , june)\n").lower()
         if month_name in months:

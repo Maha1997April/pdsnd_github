@@ -21,7 +21,6 @@ def get_filters():
     print('Hello! Let\'s explore some of bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
 
-    city_name = ''
     while city_name not in cities:
         city_name = input("\nWhat is the name of the city to analyze data? (ex; Input either chicago, new york city, washington)\n").lower()
         if city_name in cities:
@@ -33,7 +32,6 @@ def get_filters():
             print("Sorry we were not able to get the name of the city to analyze data, Please input either chicago, new york city or washington.\n")
 
     # TO DO: get user input for month (all, january, february, ... , june)
-    month_name = ''
     while month_name not in months:
         month_name = input("\nWhat is the name of the month to filter data? (ex; Input january, february, ... , june)\n").lower()
         if month_name in months:
@@ -44,7 +42,6 @@ def get_filters():
             print("Sorry we were not able to get the name of the month to filter data, Please input any months!")
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-    day_name = ''
     while day_name not in days:
         day_name = input("\nWhat is the name of the day to filter data? (ex; Input monday, tuesday, ... sunday)\n").lower()
         if day_name in days:
@@ -70,7 +67,7 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     # load data file into a dataframe
-    
+
     df = pd.read_csv(city)
 
     # convert the Start Time column to datetime
@@ -199,7 +196,7 @@ def user_stats(df, city):
         print('Most common birth from the given fitered data is: {}\n'.format(most_common_birth) )
     else:
         print('\nNo date of gender and birth year in washington!')
-        
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 

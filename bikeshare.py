@@ -42,7 +42,6 @@ def get_filters():
             print("Sorry we were not able to get the name of the month to filter data, Please input any months!")
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-    day_name = ''
     while day_name not in days:
         day_name = input("\nWhat is the name of the day to filter data? (ex; Input monday, tuesday, ... sunday)\n").lower()
         if day_name in days:
